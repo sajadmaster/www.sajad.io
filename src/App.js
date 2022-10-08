@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import './App.css';
 
 // MUI Components
@@ -14,6 +13,10 @@ import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
+
+// etc imports
+import PortfolioPdf from './assets/ramdel.pdf';
+
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -59,11 +62,16 @@ function App() {
         <Box sx={{ m: 3 }} />
         {/* Download Portfolio Button */}
         <Grid item xs={12}>
-          <Button variant="contained" size="lg" active startIcon={<PictureAsPdfOutlinedIcon style={{ color: '#1672EC' }} />} style={{ maxWidth: '350px', maxHeight: '48px', minWidth: '350px', minHeight: '48px', color: '#0F56B3', backgroundColor: '#E2EDFC' }} sx={{ boxShadow: 0 }}>
-            Download Portfolio
-          </Button>
+          <a href={PortfolioPdf} download="ramdel.pdf" style={{ textDecoration: 'none' }} >
+            <Button variant="contained" size="lg" active startIcon={<PictureAsPdfOutlinedIcon style={{ color: '#1672EC' }} />} style={{ maxWidth: '350px', maxHeight: '48px', minWidth: '350px', minHeight: '48px', color: '#0F56B3', backgroundColor: '#E2EDFC' }} sx={{ boxShadow: 0 }}>
+              Download Portfolio
+            </Button>
+          </a>
+
         </Grid>
       </Grid>
+
+
 
       {/* Bottom Section */}
       <Grid
@@ -86,12 +94,12 @@ function App() {
             <body1>Toronto, Ontario, Canada</body1>
           </Grid>
           <Box sx={{ m: 1 }} />
+          {/* Email */}
           <Tooltip title="Click to copy" arrow placement="top">
             <Button
               variant="text"
               textTransform="none"
               style={{ color: '#000', fontWeight: 'normal' }}
-              active
               onClick={() => {
                 navigator.clipboard.writeText('me@sajad.io')
                 handleClick()
@@ -102,43 +110,25 @@ function App() {
               me@sajad.io
             </Button>
           </Tooltip>
-          {/* Email */}
-
-
           <Box sx={{ m: 1 }} />
           {/* Phone number */}
           <Tooltip title="Click to copy" arrow placement="top">
-
             <Button
               variant="text"
               textTransform="none"
               style={{ color: '#000', fontWeight: 'normal' }}
-              active
               onClick={() => {
                 navigator.clipboard.writeText('0012899434731')
                 handleClick()
               }}
-              startIcon={<EmailOutlinedIcon
+              startIcon={<PhoneAndroidOutlinedIcon
                 style={{ color: '#1672EC' }}
               />}>
               +1 (289) 943-4731
             </Button>
           </Tooltip>
-
-          {/* <Grid item >
-            <PhoneAndroidOutlinedIcon sx={{ fontSize: 24, color: 'grey' }} />
-          </Grid>
-          <Grid item>
-            <body1 onClick={() => {
-              navigator.clipboard.writeText('0012899434731')
-              handleClick()
-            }}>+1 (289) 943-4731</body1>
-          </Grid> */}
         </Grid>
-
-
       </Grid>
-
     </div >
   );
 }
