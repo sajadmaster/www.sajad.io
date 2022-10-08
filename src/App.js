@@ -1,7 +1,13 @@
+import * as React from 'react';
+
 import './App.css';
+
+// MUI Components
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Snackbar from '@mui/material/Snackbar';
+import Tooltip from '@mui/material/Tooltip';
 
 // icons
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
@@ -10,8 +16,24 @@ import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return (
     <div className="App">
+      {/*  snackbar: Copied to clipboard  */}
+      <Snackbar
+        open={open}
+        autoHideDuration={4000}
+        message="Copied to clipboard"
+        onClose={handleClose}
+      />
 
       {/* Middle Section */}
       <Grid
@@ -64,22 +86,54 @@ function App() {
             <body1>Toronto, Ontario, Canada</body1>
           </Grid>
           <Box sx={{ m: 1 }} />
+          <Tooltip title="Click to copy" arrow placement="top">
+            <Button
+              variant="text"
+              textTransform="none"
+              style={{ color: '#000', fontWeight: 'normal' }}
+              active
+              onClick={() => {
+                navigator.clipboard.writeText('me@sajad.io')
+                handleClick()
+              }}
+              startIcon={<EmailOutlinedIcon
+                style={{ color: '#1672EC' }}
+              />}>
+              me@sajad.io
+            </Button>
+          </Tooltip>
           {/* Email */}
-          <Grid item >
-            <EmailOutlinedIcon sx={{ fontSize: 24, color: 'grey' }} />
-          </Grid>
-          <Grid item>
-            <body1 onClick={() => { navigator.clipboard.writeText('me@sajad.io') }}
-            >me@sajad.io</body1>
-          </Grid>
+
+
           <Box sx={{ m: 1 }} />
           {/* Phone number */}
-          <Grid item >
+          <Tooltip title="Click to copy" arrow placement="top">
+
+            <Button
+              variant="text"
+              textTransform="none"
+              style={{ color: '#000', fontWeight: 'normal' }}
+              active
+              onClick={() => {
+                navigator.clipboard.writeText('0012899434731')
+                handleClick()
+              }}
+              startIcon={<EmailOutlinedIcon
+                style={{ color: '#1672EC' }}
+              />}>
+              +1 (289) 943-4731
+            </Button>
+          </Tooltip>
+
+          {/* <Grid item >
             <PhoneAndroidOutlinedIcon sx={{ fontSize: 24, color: 'grey' }} />
           </Grid>
           <Grid item>
-            <body1 onClick={() => { navigator.clipboard.writeText('0012899434731') }}>+1 (289) 943-4731</body1>
-          </Grid>
+            <body1 onClick={() => {
+              navigator.clipboard.writeText('0012899434731')
+              handleClick()
+            }}>+1 (289) 943-4731</body1>
+          </Grid> */}
         </Grid>
 
 
