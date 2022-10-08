@@ -1,15 +1,18 @@
 import './App.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Row>
+      {/* div center content */}
+        <div className='roomfac'>
+          {/* <Row>
+            <img src={require('./assets/sajad_rahmdel.png')} alt="sajad_rahmdel" width={266} height={266} />
+          </Row>
+          <Row>
+            <h5>Sajad Rahmdel</h5>
+          </Row> */}
+        </div>
+      {/* <Row>
           <Col>
             <img
               alt='sajad rahmdel'
@@ -30,16 +33,15 @@ function App() {
             <body2>#Flutter &nbsp; #Android &nbsp; #iOS</body2>
           </Col>
           {/* Col > Blue Button with text "Download Portfolio" with pdf icon*/}
-          <Col>
-            <Button variant="primary" size="lg" active>
-              Download Portfolio
-            </Button>
-          </Col>
-          
-        </Row>
-      </Container>
+      {/* <Col>
+          <Button variant="primary" size="lg" active>
+            Download Portfolio
+          </Button>
+        </Col> */}
 
-    </div>
+      {/* </Row> */}
+
+    </div >
   );
 }
 

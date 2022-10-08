@@ -1,0 +1,12 @@
+// Override default variables before the import
+// $body-bg: #000;
+.roomfac {
+    display: flex;
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
