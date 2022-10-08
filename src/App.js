@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
+import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
           <body2>#Flutter &nbsp; #Android &nbsp; #iOS</body2>
         </Grid>
         <Box sx={{ m: 3 }} />
+        {/* Download Portfolio Button */}
         <Grid item xs={12}>
-          <Button variant="contained" size="lg" active>
+          <Button variant="contained" size="lg" active startIcon={<PictureAsPdfOutlinedIcon style={{ color: '#1672EC' }} />} style={{ maxWidth: '350px', maxHeight: '48px', minWidth: '350px', minHeight: '48px', color: '#0F56B3', backgroundColor: '#E2EDFC' }} sx={{ boxShadow: 0 }}>
             Download Portfolio
           </Button>
         </Grid>
