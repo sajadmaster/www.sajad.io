@@ -1,22 +1,22 @@
-import * as React from 'react';
-import './App.css';
+import * as React from "react";
+import "./App.css";
 
 // MUI Components
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Snackbar from '@mui/material/Snackbar';
-import Tooltip from '@mui/material/Tooltip';
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Snackbar from "@mui/material/Snackbar";
+import Tooltip from "@mui/material/Tooltip";
+import Alert from "@mui/material/Alert";
 
 // icons
-import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
-import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
+import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
+import PictureAsPdfOutlinedIcon from "@mui/icons-material/PictureAsPdfOutlined";
 
 // etc imports
-import PortfolioPdf from './assets/sajad.pdf';
-
+import PortfolioPdf from "./assets/sajad.pdf";
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -26,7 +26,6 @@ function App() {
   const handleClose = () => {
     setOpen(false);
   };
-
 
   return (
     <div className="App">
@@ -45,10 +44,15 @@ function App() {
         spacing={2}
         alignItems="center"
         justifyContent="center"
-        style={{ minHeight: '95vh' }}
+        style={{ minHeight: "95vh" }}
       >
         <Grid item xs={12}>
-          <img src={require('./assets/sajad_rahmdel.png')} alt="sajad_rahmdel" width={266} height={266} />
+          <img
+            src={require("./assets/sajad_rahmdel.png")}
+            alt="sajad_rahmdel"
+            width={266}
+            height={266}
+          />
         </Grid>
         <Grid item xs={12}>
           <h5>Sajad Rahmdel</h5>
@@ -59,19 +63,43 @@ function App() {
         <Grid item xs={12}>
           <body2>#Flutter &nbsp; #Android &nbsp; #iOS</body2>
         </Grid>
+        <Grid item xs={12} margin={2}>
+          {/* algin text left */}
+          <Alert severity="info">
+            I'm currently in South Korea and will be in Canada on November 18th.
+          </Alert>
+        </Grid>
+
         <Box sx={{ m: 3 }} />
         {/* Download Portfolio Button */}
         <Grid item xs={12}>
-          <a href={PortfolioPdf} download="sajad.pdf" style={{ textDecoration: 'none' }} >
-            <Button variant="contained" size="lg" active startIcon={<PictureAsPdfOutlinedIcon style={{ color: '#1672EC' }} />} style={{ maxWidth: '350px', maxHeight: '48px', minWidth: '350px', minHeight: '48px', color: '#0F56B3', backgroundColor: '#E2EDFC' }} sx={{ boxShadow: 0 }}>
+          <a
+            href={PortfolioPdf}
+            download="sajad.pdf"
+            style={{ textDecoration: "none" }}
+          >
+            <Button
+              variant="contained"
+              size="lg"
+              active
+              startIcon={
+                <PictureAsPdfOutlinedIcon style={{ color: "#1672EC" }} />
+              }
+              style={{
+                maxWidth: "350px",
+                maxHeight: "48px",
+                minWidth: "350px",
+                minHeight: "48px",
+                color: "#0F56B3",
+                backgroundColor: "#E2EDFC",
+              }}
+              sx={{ boxShadow: 0 }}
+            >
               Download Portfolio
             </Button>
           </a>
-
         </Grid>
       </Grid>
-
-
 
       {/* Bottom Section */}
       <Grid
@@ -80,18 +108,32 @@ function App() {
         spacing={2}
         alignItems="center"
         justifyContent="center"
+        padding={3}
       >
-        <Grid container
+        <Grid
+          container
           alignItems="center"
           justifyContent="center"
           spacing={0.5}
         >
           {/* Address */}
-          <Grid item >
-            <FmdGoodOutlinedIcon sx={{ fontSize: 24, color: 'grey' }} />
-          </Grid>
-          <Grid item >
-            <body1>Toronto, Ontario, Canada</body1>
+          {/* <Grid item>
+            <FmdGoodOutlinedIcon sx={{ fontSize: 24, color: "grey" }} />
+          </Grid> */}
+          <Grid item>
+            <Button
+              variant="text"
+              textTransform="none"
+              style={{ color: "#000", fontWeight: "normal" }}
+              // onClick={() => {
+              //   navigator.clipboard.writeText("me@sajad.io");
+              //   handleClick();
+              // }}
+              startIcon={<FmdGoodOutlinedIcon style={{ color: "#1672EC" }} />}
+            >
+              Toronto, Ontario, Canada
+            </Button>
+            {/* <body1>Toronto, Ontario, Canada</body1> */}
           </Grid>
           <Box sx={{ m: 1 }} />
           {/* Email */}
@@ -99,14 +141,13 @@ function App() {
             <Button
               variant="text"
               textTransform="none"
-              style={{ color: '#000', fontWeight: 'normal' }}
+              style={{ color: "#000", fontWeight: "normal" }}
               onClick={() => {
-                navigator.clipboard.writeText('me@sajad.io')
-                handleClick()
+                navigator.clipboard.writeText("me@sajad.io");
+                handleClick();
               }}
-              startIcon={<EmailOutlinedIcon
-                style={{ color: '#1672EC' }}
-              />}>
+              startIcon={<EmailOutlinedIcon style={{ color: "#1672EC" }} />}
+            >
               me@sajad.io
             </Button>
           </Tooltip>
@@ -116,20 +157,21 @@ function App() {
             <Button
               variant="text"
               textTransform="none"
-              style={{ color: '#000', fontWeight: 'normal' }}
+              style={{ color: "#000", fontWeight: "normal" }}
               onClick={() => {
-                navigator.clipboard.writeText('0012899434731')
-                handleClick()
+                navigator.clipboard.writeText("0012899434731");
+                handleClick();
               }}
-              startIcon={<PhoneAndroidOutlinedIcon
-                style={{ color: '#1672EC' }}
-              />}>
+              startIcon={
+                <PhoneAndroidOutlinedIcon style={{ color: "#1672EC" }} />
+              }
+            >
               +1 (289) 943-4731
             </Button>
           </Tooltip>
         </Grid>
       </Grid>
-    </div >
+    </div>
   );
 }
 
