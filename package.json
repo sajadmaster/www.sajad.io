@@ -1,7 +1,7 @@
 {
   "name": "www_sajad_io",
   "version": "0.1.0",
-  "homepage": "https://sajadmaster.github.io/www.sajad.io/",
+  "homepage": "https://www.sajad.io/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
