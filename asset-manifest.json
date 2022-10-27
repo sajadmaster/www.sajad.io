@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a9596b0.css",
-    "main.js": "/static/js/main.c7833479.js",
-    "static/js/787.cb97eb8e.chunk.js": "/static/js/787.cb97eb8e.chunk.js",
-    "static/media/sajad.pdf": "/static/media/sajad.969738d7a7779fa9212e.pdf",
-    "static/media/sajad_rahmdel.png": "/static/media/sajad_rahmdel.7d2ae601def5e456466b.png",
-    "index.html": "/index.html",
-    "main.2a9596b0.css.map": "/static/css/main.2a9596b0.css.map",
-    "main.c7833479.js.map": "/static/js/main.c7833479.js.map",
-    "787.cb97eb8e.chunk.js.map": "/static/js/787.cb97eb8e.chunk.js.map"
+    "main.css": "/www.sajad.io/static/css/main.baf1bfcc.css",
+    "main.js": "/www.sajad.io/static/js/main.48ba0d9a.js",
+    "static/js/787.cb97eb8e.chunk.js": "/www.sajad.io/static/js/787.cb97eb8e.chunk.js",
+    "static/media/sajad.pdf": "/www.sajad.io/static/media/sajad.969738d7a7779fa9212e.pdf",
+    "static/media/sajad_rahmdel.png": "/www.sajad.io/static/media/sajad_rahmdel.7d2ae601def5e456466b.png",
+    "index.html": "/www.sajad.io/index.html",
+    "main.baf1bfcc.css.map": "/www.sajad.io/static/css/main.baf1bfcc.css.map",
+    "main.48ba0d9a.js.map": "/www.sajad.io/static/js/main.48ba0d9a.js.map",
+    "787.cb97eb8e.chunk.js.map": "/www.sajad.io/static/js/787.cb97eb8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a9596b0.css",
-    "static/js/main.c7833479.js"
+    "static/css/main.baf1bfcc.css",
+    "static/js/main.48ba0d9a.js"
   ]
 }
