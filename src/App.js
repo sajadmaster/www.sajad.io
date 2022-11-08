@@ -17,6 +17,7 @@ import PictureAsPdfOutlinedIcon from "@mui/icons-material/PictureAsPdfOutlined";
 
 // etc imports
 import PortfolioPdf from "./assets/sajad.pdf";
+import ResumePdf from "./assets/sajad_resume.pdf";
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -58,7 +59,7 @@ function App() {
           <h5>Sajad Rahmdel</h5>
         </Grid>
         <Grid item xs={12}>
-          <body1>Senior Mobile Application Developer</body1>
+          <body1>Mobile Application Developer</body1>
         </Grid>
         <Grid item xs={12}>
           <body2>#Flutter &nbsp; #Android &nbsp; #iOS</body2>
@@ -66,11 +67,39 @@ function App() {
         <Grid item xs={12} margin={2}>
           {/* algin text left */}
           <Alert severity="info">
-            I'm currently in South Korea and will be in Canada on November 18th.
+            I'm currently in South Korea and will be in Canada on November 18th, 2022.
           </Alert>
         </Grid>
 
         <Box sx={{ m: 3 }} />
+        {/* Download Resume Button */}
+        <Grid item xs={12}>
+          <a
+            href={ResumePdf}
+            download="sajad_resume.pdf"
+            style={{ textDecoration: "none" }}
+          >
+            <Button
+            
+              variant="contained"
+              size="lg"
+              active
+              startIcon={
+                <PictureAsPdfOutlinedIcon style={{ color: "#FFFFFF" }} />
+              }
+              style={{
+                maxWidth: "350px",
+                maxHeight: "48px",
+                minWidth: "350px",
+                minHeight: "48px",
+                color: "#FFFFFF",
+                backgroundColor: "#1F8B24",             }}
+              sx={{ boxShadow: 0 }}
+            >
+              Download Resume
+            </Button>
+          </a>
+        </Grid>
         {/* Download Portfolio Button */}
         <Grid item xs={12}>
           <a
