@@ -188,14 +188,14 @@ function App() {
               textTransform="none"
               style={{ color: "#000", fontWeight: "normal" }}
               onClick={() => {
-                navigator.clipboard.writeText("0012899434731");
+                navigator.clipboard.writeText("00821025081486");
                 handleClick();
               }}
               startIcon={
                 <PhoneAndroidOutlinedIcon style={{ color: "#1672EC" }} />
               }
             >
-              +1 (289) 943-4731
+              +82 (10) 2508-1486
             </Button>
           </Tooltip>
         </Grid>
