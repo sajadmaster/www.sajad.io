@@ -67,7 +67,7 @@ function App() {
         <Grid item xs={12} margin={2}>
           {/* algin text left */}
           <Alert severity="info">
-            I'm currently in South Korea and will be in Canada on November 18th, 2022.
+            I'm currently looking for a Flutter, Android, iOS development position.
           </Alert>
         </Grid>
 
