@@ -59,7 +59,7 @@ function App() {
           <h5>Sajad Rahmdel</h5>
         </Grid>
         <Grid item xs={12}>
-          <body1>Mobile Application Developer</body1>
+          <body1>Senior Mobile App Developer, Mobile Tester, Mobile DevOps</body1>
         </Grid>
         <Grid item xs={12}>
           <body2>#Flutter &nbsp; #Android &nbsp; #iOS</body2>
