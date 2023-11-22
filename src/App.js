@@ -67,7 +67,7 @@ function App() {
         <Grid item xs={12} margin={2}>
           {/* algin text left */}
           <Alert severity="info">
-            I'm currently looking for a Flutter, Android, iOS development position.
+            I'm currently working for SOTI. Unless they kick me out, I'm not leaving them. [this means I'm not available for your position but thanks for visiting, bye!]
           </Alert>
         </Grid>
 
